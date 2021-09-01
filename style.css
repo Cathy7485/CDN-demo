@@ -1,0 +1,800 @@
+/* 義守CSS修改 
+---------------------------*/
+/* 首頁 */
+
+/* 導覽列排版 */
+.utility-nav {
+	display: block;
+	position: relative;
+	top: 0;
+	right: 0;
+	min-height: 42px;
+	padding: 4px 0;
+}
+
+.audience-nav__list {
+	float: right;
+}
+
+/* header整體高度 */
+.global-header {
+	height: 140px;
+	position: relative;
+}
+
+/* LOGO文字隱藏 */
+.logo-link {
+	border: 0;
+	display: block;
+	height: 70px;
+	text-indent: -9999px;
+}
+
+/* 首頁LOGO連結 */
+.global-header-logo {
+	display: block;
+	position: relative;
+	z-index: 999;
+}
+
+/* 首頁LOGO定位 */
+.logo-box {
+	margin: 0;
+	line-height: 80px;
+}
+
+/* 導覽列選項排版 */
+.main-nav__list {
+	margin-left: 0;
+}
+
+/* 中間區塊標題 */
+.box-title {
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #06294f;
+	padding-bottom: 10px;
+}
+
+.box-title::before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #f2c100;
+	border-left-color: #f2c100;
+	margin-right: 8px;
+}
+
+/* 中間 輪播看板排版 */
+.home-feature__initiatives {
+	top: 0;
+	order: 1;
+}
+
+.home-features {
+	order: 2;
+}
+
+/* 即時訊息區塊 */
+.home-feature__happenings {
+	order: 2;
+	flex-basis: 50%;
+}
+
+.home-feature__list li:first-child {
+	margin: 0;
+	padding: 10px 0;
+	border-top: 1px dashed #eee;
+	border-bottom: dashed 1px #eee;
+}
+
+.home-feature__list li {
+	margin: 0;
+	border-bottom: dashed 1px #eee;
+	padding: 10px 0;
+	position: relative;
+}
+
+.home-feature__list li>a:hover {
+	color: #fff;
+}
+
+
+.home-feature__moreBtn a {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 6px;
+	overflow: hidden;
+}
+
+.home-feature__moreBtn a::after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #f2c100;
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.home-feature__moreBtn a:hover {
+	color: #06294f;
+	transition: all 0.3s ease;
+}
+
+.home-feature__moreBtn a:hover::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* 相關連結區塊 */
+.home-feature__happenings+.home-feature__happenings {
+	flex-basis: 50%;
+}
+
+/* 自定義 
+--------------------*/
+p {
+	margin: 0;
+}
+
+/* 按鈕hover變化 */
+.bgLeft:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f2c100;
+	width: 100%;
+	height: 100%;
+	transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	z-index: -1;
+}
+
+.bgLeft:hover:before {
+	transform-origin: left top;
+	transform: scale(1, 1);
+}
+
+#main_column {
+	position: relative;
+}
+
+.navbar-outerBox {
+	background: #06294f;
+}
+
+.mini-nav {
+	position: relative;
+}
+
+.mini-nav {
+	background: #1d4b7c;
+}
+
+.navbar-outerBox {
+	position: relative;
+	min-height: 95px;
+	z-index: 3;
+}
+
+.navbarBox-inner {
+	position: relative;
+	width: 1360px;
+	margin: 0 auto;
+}
+
+/* 手機板功能選單按鈕背景 */
+.bg-light-opacity {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+/* 頂端連結區塊 義守/語言 */
+.topLink-Bar {
+	padding: 5px 15px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 1360px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+
+.topLink-Bar a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.isuWeb-btn {
+	display: inline-block;
+	margin-right: 30px;
+	line-height: 35px;
+}
+
+/* 語言 */
+.languageBtn {
+	padding-left: 0;
+	margin: 0;
+	display: inline-block;
+	line-height: 20px;
+}
+
+.language-item {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+/* 跑馬燈 */
+.marquee-outer-box {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.marquee-box {
+	width: 100%;
+	height: 55px;
+	margin: 10px 0;
+	border: solid 2px #06294f;
+	border-left: none;
+	border-right: none;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.marquee {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	white-space: nowrap;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+.marquee li {
+	display: inline-block;
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+.marquee a {
+	color: #06294f;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.marquee a:hover {
+	color: #f2c100;
+}
+
+.marquee-icon {
+	display: inline-block;
+	position: absolute;
+	padding-left: 15px;
+	font-size: 20px;
+	color: #1d4b7c;
+	line-height: 55px;
+	width: 55px;
+	height: 55px;
+	background: #f5f5f5;
+	z-index: 1;
+}
+
+.marquee-item {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	height: 55px;
+	line-height: 55px;
+	animation: marquee 300s linear infinite;
+}
+
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+/* 系所活動按鈕 */
+.eventBox {
+	position: relative;
+}
+
+.eventBox .carousel-control-next,
+.eventBox .carousel-control-prev {
+	width: 45px;
+	height: 45px;
+}
+
+.eventBox .carousel-control-next:hover,
+.eventBox .carousel-control-prev:hover {
+	background: #f2c100;
+}
+
+.eventBox .carousel-control-prev {
+	left: auto;
+	right: 45px !important;
+}
+
+.eventBox .carousel-control-prev-icon,
+.eventBox .carousel-control-next-icon {
+	background-image: none;
+}
+
+.eventBox .carousel-fade .carousel-item {
+	max-height: 345px;
+}
+
+/* 中間區塊背景 */
+.slab {
+	position: relative;
+	overflow: hidden;
+}
+
+.slab.-darkest-blue::before {
+	content: "";
+	background: url("../images/bg-text01.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 130px;
+	height: 700px;
+}
+
+.slab.-darkest-blue::after {
+	content: "";
+	background: url("../images/bg-text02.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 130px;
+	height: 1055px;
+	z-index: -1;
+}
+
+/* 首頁相關連結 */
+.link-List-box {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.linkList-item {
+	display: inline-block;
+	flex-basis: 49%;
+}
+
+.linkList-item a {
+	position: relative;
+	display: block;
+	padding: 15px 20px;
+	margin: 5px;
+	min-width: 210px;
+	background: #1d4b7c;
+	color: #fff !important;
+	text-align: center;
+}
+
+.linkList-item .bgLeft:hover {
+	z-index: 2;
+}
+
+
+/* 作品區塊 */
+.workBox {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+.box-outer {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.box-outer img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+	transition: ease-in-out .5s;
+	vertical-align: bottom;
+}
+
+.box-outer img:hover {
+	transform: scale(1.2);
+	transition: ease-in-out .5s;
+}
+
+.workBox-title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 170px;
+	height: 45px;
+	background: #1d4b7c;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	z-index: 1;
+}
+
+/* 首頁Icon 貼心連結  */
+.IconLinkBox {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+.IconLink {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	list-style: none;
+	justify-content: space-around;
+}
+
+.IconLink-item {
+	display: inline-block;
+	flex-basis: 24%;
+	margin: 0 2px 12px 2px;
+}
+
+.IconLink-item a {
+	position: relative;
+	display: flex;
+	background: #1d4b7c;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 2px 2px 2px 20px;
+	line-height: 58px;
+	justify-content: flex-start;
+	align-items: center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.IconLink-item .bgLeft:hover {
+	z-index: 2;
+}
+
+.IconLink-item a:hover {
+	color: #06294f !important;
+}
+
+
+.IconLink-item img {
+	width: 45px;
+	height: 45px;
+	margin-right: 15px;
+}
+
+/* 師資頁面 */
+.cardBox {
+	display: flex;
+	padding: 20px;
+	margin: 10px;
+	color: #06294f;
+	text-align: center;
+}
+
+.cardBox ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+.teacherBox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.teacherBox-inner {
+	flex-basis: 25%;
+	margin-bottom: 50px;
+}
+
+.teacherBox .card {
+	position: relative;
+	margin: 10px;
+	padding: 15px 15px 20px;
+	height: 100%;
+	border: none;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 5px 5px 8px 5px rgba(186, 186, 186, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.more-info {
+	color: #06294f !important;
+	font-weight: 400;
+}
+
+.more-info:hover::after {
+	height: 10px;
+	transition: ease-in-out .3s;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
+
+.more-info:hover .t-imgBox img {
+	transition: ease-in-out 0.5s;
+	transform: scale(1.1);
+}
+
+
+.more-info::after {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 0;
+	background: #4ba8ff;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.t-imgBox {
+	margin: 0 auto;
+	max-width: 200px;
+	background: #f2c100;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.t-imgBox img {
+	transform: scale(1);
+}
+
+.t-info {
+	margin: 20px auto 35px;
+	text-align: center;
+}
+
+.t-title {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: .1em;
+	margin-bottom: 8px;
+}
+
+.t-name {
+	letter-spacing: .1em;
+}
+
+.t-moreBtn {
+	display: block;
+	text-align: center;
+}
+
+.t-moreBtn {
+	font-family: 'Helvetica';
+	font-weight: normal !important;
+	color: #06294f !important;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+}
+
+
+/* Footer 資訊*/
+.global-footer .inner {
+	margin: 0 auto;
+	max-width: 1360px;
+}
+
+.f-logo-box {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.footer-info-outer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-info {
+	font-size: 14px;
+	text-align: left;
+	display: inline-block;
+}
+
+.footer-info p {
+	margin-bottom: 5px;
+}
+
+.copyright-box {
+	font-size: 14px;
+	text-align: left;
+}
+
+.footer-link-box {
+	text-align: right;
+}
+
+.footer-link {
+	display: inline-block;
+	padding: 0;
+}
+
+.footer-link-item {
+	display: inline-block;
+	margin: 0 4px;
+	font-size: 14px;
+}
+
+.footer-link-item i {
+	margin-right: 5px;
+}
+
+
+/* RWD 響應式
+-------------------*/
+
+@media (min-width:1200px) {
+
+	.navbarBox-inner,
+	.topLink-Bar {
+		width: 96%;
+		max-width: 1360px;
+	}
+
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+	.navbarBox-inner,
+	.topLink-Bar {
+		width: 90%;
+	}
+
+	.teacherBox-inner {
+		flex-basis: 25%;
+	}
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+	.home-feature__happenings,
+	.home-feature__happenings+.home-feature__happenings {
+		flex-basis: 100%;
+	}
+
+	.topLink-Bar {
+		width: auto;
+	}
+
+	.navbarBox-inner {
+		width: auto;
+		padding: 0 20px;
+	}
+
+	.marquee-outer-box {
+		width: auto;
+	}
+
+	.linkList-item,
+	.IconLink-item {
+		flex-basis: 49%;
+	}
+
+	.teacherBox-inner {
+		flex-basis: 50%;
+	}
+}
+
+@media (min-width:576px) and (max-width:767.9px) {
+
+	.home-feature__happenings,
+	.home-feature__happenings+.home-feature__happenings {
+		flex-basis: 100%;
+	}
+
+	.topLink-Bar {
+		width: auto;
+		justify-content: space-between;
+	}
+
+	.navbar-outerBox::before {
+		transform: none;
+	}
+
+	.navbarBox-inner {
+		width: auto;
+		padding: 0 20px;
+	}
+
+	.marquee-outer-box {
+		width: auto;
+	}
+
+	.linkList-item,
+	.IconLink-item {
+		flex-basis: 49%;
+	}
+
+	.teacherBox-inner {
+		flex-basis: 50%;
+	}
+
+	.copyright-box,
+	.footer-link-box {
+		text-align: center;
+	}
+}
+
+@media (min-width:0px) and (max-width:577.9px) {
+
+	.home-feature__happenings,
+	.home-feature__happenings+.home-feature__happenings {
+		flex-basis: 100%;
+	}
+
+	.topLink-Bar {
+		width: auto;
+	}
+
+	.navbar-outerBox::before {
+		transform: none;
+	}
+
+	.navbarBox-inner {
+		width: auto;
+		padding: 0 20px;
+	}
+
+	.marquee-outer-box {
+		width: auto;
+	}
+
+	.logo-box {
+		max-width: 270px;
+	}
+
+	.logo-img {
+		width: 85%;
+	}
+
+	.topLink-Bar {
+		justify-content: space-between;
+	}
+
+	.linkList-item,
+	.IconLink-item {
+		flex-basis: 100%;
+	}
+
+	.teacherBox-inner {
+		flex-basis: 100%;
+	}
+
+	.copyright-box,
+	.footer-link-box {
+		text-align: center;
+		margin-top: 8px;
+	}
+
+}
