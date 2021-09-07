@@ -138,6 +138,16 @@
 	flex-basis: 50%;
 }
 
+/* 內頁 師資 */
+.container.-narrow,
+.content_spotlight_div,
+.content_medium_heading,
+.webform-client-form-106 {
+	max-width: inherit;
+	overflow: visible;
+}
+
+
 /* 自定義 
 --------------------*/
 p {
@@ -167,6 +177,8 @@ p {
 #main_column {
 	position: relative;
 }
+
+
 
 .navbar-outerBox {
 	background: #06294f;
@@ -202,6 +214,7 @@ p {
 	padding: 5px 15px;
 	display: flex;
 	justify-content: flex-end;
+	flex-wrap: nowrap;
 	align-items: center;
 	width: 1360px;
 	margin: 0 auto;
@@ -218,6 +231,7 @@ p {
 	display: inline-block;
 	margin-right: 30px;
 	line-height: 35px;
+	min-width: 135px;
 }
 
 /* 語言 */
@@ -226,6 +240,7 @@ p {
 	margin: 0;
 	display: inline-block;
 	line-height: 20px;
+	white-space: nowrap;
 }
 
 .language-item {
@@ -237,6 +252,7 @@ p {
 .marquee-outer-box {
 	max-width: 100%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .marquee-box {
@@ -298,6 +314,7 @@ p {
 }
 
 
+
 @keyframes marquee {
 	0% {
 		transform: translate(0, 0);
@@ -307,6 +324,29 @@ p {
 		transform: translate(-100%, 0);
 	}
 }
+
+/* 背景圖片CSS */
+.slab.-darkest-blue {
+	background: url("../upload/628/images/bg-img/bg-noise.png") repeat-x;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-size: auto;
+	background-size: auto 70%;
+	background-position: bottom;
+}
+
+.slab.-darkest-blue::before {
+	background: url("../upload/628/images/bg-img/bg-text01.png") no-repeat !important;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.slab.-darkest-blue::after {
+	background: url("../upload/628/images/bg-img/bg-text02.png") no-repeat !important;
+	pointer-events: none;
+	z-index: 1 !important;
+}
+
 
 /* 系所活動按鈕 */
 .eventBox {
@@ -346,24 +386,26 @@ p {
 
 .slab.-darkest-blue::before {
 	content: "";
-	background: url("../images/bg-text01.png") no-repeat;
+	background: url("images/bg-text01.png") no-repeat;
 	background-size: contain;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 130px;
 	height: 700px;
+	pointer-events: none;
 }
 
 .slab.-darkest-blue::after {
 	content: "";
-	background: url("../images/bg-text02.png") no-repeat;
+	background: url("images/bg-text02.png") no-repeat;
 	background-size: contain;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	width: 130px;
 	height: 1055px;
+	pointer-events: none;
 	z-index: -1;
 }
 
@@ -505,6 +547,7 @@ p {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .teacherBox-inner {
@@ -658,8 +701,19 @@ p {
 
 	.navbarBox-inner,
 	.topLink-Bar {
-		width: 96%;
+		width: 93%;
 		max-width: 1360px;
+	}
+
+	/* 導覽列子選單 */
+	.navbar-expand-lg .navbar-nav .dropdown-menu {
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+	}
+
+	nav .dropdown-menu.show .dropdown-item {
+		max-width: 150px;
+		white-space: normal !important;
 	}
 
 }
@@ -671,9 +725,21 @@ p {
 		width: 90%;
 	}
 
+	/* 導覽列子選單 */
+	.navbar-expand-lg .navbar-nav .dropdown-menu {
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+	}
+
+	nav .dropdown-menu.show .dropdown-item {
+		max-width: 150px;
+		white-space: normal !important;
+	}
+
 	.teacherBox-inner {
 		flex-basis: 25%;
 	}
+
 }
 
 @media (min-width:768px) and (max-width:991px) {
@@ -689,7 +755,13 @@ p {
 
 	.navbarBox-inner {
 		width: auto;
-		padding: 0 20px;
+		padding: 0 20px 10px;
+	}
+
+	/* 導覽列子選單 */
+	nav .dropdown-menu.show .dropdown-item {
+		max-width: 150px;
+		white-space: normal !important;
 	}
 
 	.marquee-outer-box {
@@ -724,7 +796,12 @@ p {
 
 	.navbarBox-inner {
 		width: auto;
-		padding: 0 20px;
+		padding: 0 20px 10px;
+	}
+
+	nav .dropdown-menu.show .dropdown-item {
+		max-width: auto;
+		white-space: normal !important;
 	}
 
 	.marquee-outer-box {
@@ -744,6 +821,8 @@ p {
 	.footer-link-box {
 		text-align: center;
 	}
+
+
 }
 
 @media (min-width:0px) and (max-width:577.9px) {
@@ -763,7 +842,12 @@ p {
 
 	.navbarBox-inner {
 		width: auto;
-		padding: 0 20px;
+		padding: 0 20px 10px;
+	}
+
+	/* 導覽列子選單 */
+	nav .dropdown-menu.show .dropdown-item {
+		max-width: 100%;
 	}
 
 	.marquee-outer-box {
@@ -795,6 +879,11 @@ p {
 	.footer-link-box {
 		text-align: center;
 		margin-top: 8px;
+	}
+
+	.f-logo-box,
+	.footer-info-outer {
+		justify-content: center;
 	}
 
 }
