@@ -138,15 +138,6 @@
 	flex-basis: 50%;
 }
 
-/* 內頁 師資 */
-.container.-narrow,
-.content_spotlight_div,
-.content_medium_heading,
-.webform-client-form-106 {
-	max-width: inherit;
-	overflow: visible;
-}
-
 
 /* 自定義 
 --------------------*/
